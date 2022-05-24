@@ -15,3 +15,11 @@ async def root(request: Request):
     return templates.TemplateResponse(
         "index.html", {"request": request, "title": "Book Collector"}
     )
+
+
+@app.get("/search", response_class=HTMLResponse)
+async def search(request: Request, q: str):
+    print(q)
+    return templates.TemplateResponse(
+        "index.html", {"request": request, "title": "Book Collector", "keyword": q}
+    )
