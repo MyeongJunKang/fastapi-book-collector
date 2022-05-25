@@ -4,8 +4,6 @@ from typing import Optional
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-MONGO_DB_NAME = get_secret("MONGO_DB_NAME")
-MONGO_DB_URL = get_secret("MONGO_DB_URL")
 
 
 def get_secret(
