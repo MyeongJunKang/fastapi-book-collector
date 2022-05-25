@@ -8,8 +8,8 @@ from app.book_scraper import NaverBookScraper
 
 BASE_DIR = Path(__file__).resolve().parent
 
-app = FastAPI()
-templates = Jinja2Templates(directory=BASE_DIR / "templates")
+app = FastAPI(title="데이터 수집기", version="0.0.1")
+templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 
 @app.get("/", response_class=HTMLResponse)
