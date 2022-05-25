@@ -21,5 +21,11 @@ def get_secret(
         raise EnvironmentError(f"Set the {key} environment variable")
 
 
+MONGO_DB_NAME = get_secret("MONGO_DB_NAME")
+MONGO_DB_URL = get_secret("MONGO_DB_URL")
+NAVER_API_ID = get_secret("NAVER_API_ID")
+NAVER_API_SECRET = get_secret("NAVER_API_SECRET")
+
+
 if __name__ == "__main__":
     get_secret("test")
